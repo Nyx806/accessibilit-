@@ -3,33 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Description de la page pour améliorer l'accessibilité et le SEO.">
+    <meta name="description" content="site de vente de figurine Ghibli.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titre de la page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Titre principal de la page</h1>
+        <h1>Vente de figurine Ghibli</h1>
         <nav>
             <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="section1">
-            <h2>Titre de la section 1</h2>
-            <p>Contenu de la section 1.</p>
+            <h2>Figurine Takeya Soldat Dorok 1 - Nausicaä la valée du vent</h2>
+            <article class="article1">
+                <img src="/img/img1.png" alt="Figurine Takeya Soldat Dorok 1 - Nausicaä la valée du vent" width="300" height="400">
+                <h3>description</h3>
+                <p> Le projet KT Revoltech Dorok Soldier est une figurine d'action produite par Kaiyodo, basée sur le personnage de la célèbre série de manga et d'anime japonaise "Nausicaä de la Vallée du Vent". Le Dorok Soldier est une créature humanoïde qui sert d'un des antagonistes de la série.
+                    La figurine est livrée avec divers accessoires, notamment une lance et un bouclier, ainsi que des mains et des plaques de visage interchangeables. Le Dorok Soldier est également conçu pour être compatible avec d'autres figurines de la gamme Revoltech, permettant des affichages dynamiques et des combats entre personnages de la série Nausicaä et au-delà.
+                </p>
+                <h4>soundtrack</h4>
+                <video src="/img/video.mp4" controls width="300" height="200">
+                    <p>Votre navigateur ne supporte pas la vidéo.</p>
+                </video>
+            </article>
         </section>
+
         <section id="section2">
-            <h2>Titre de la section 2</h2>
-            <p>Contenu de la section 2.</p>
-        </section>
-        <section id="section3">
-            <h2>Titre de la section 3</h2>
-            <p>Contenu de la section 3.</p>
+            <h2>Formulaire de Contact</h2>
+            <div>
+                <article class="contact">
+                    <h3>Contactez-nous</h3>
+                    <form action="contact.php" method="post">
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
