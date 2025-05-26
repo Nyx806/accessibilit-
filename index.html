@@ -3,57 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="site de vente de figurine Ghibli.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titre de la page</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Boutique en ligne de figurines Ghibli - Découvrez notre collection exclusive de figurines inspirées des films du Studio Ghibli">
+    <title>Accueil - Vente de figurines Ghibli</title>
+    <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
     <header>
-        <h1>Vente de figurine Ghibli</h1>
-        <nav>
-            <ul>
-                <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">Contact</a></li>
+        <h1>Vente de figurines Ghibli</h1>
+        <nav aria-label="Menu principal">
+            <ul class="navbar">
+                <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="section1">
-            <h2>Figurine Takeya Soldat Dorok 1 - Nausicaä la valée du vent</h2>
-            <article class="article1">
-                <img src="/img/img1.png" alt="Figurine Takeya Soldat Dorok 1 - Nausicaä la valée du vent" width="300" height="400">
-                <h3>description</h3>
-                <p> Le projet KT Revoltech Dorok Soldier est une figurine d'action produite par Kaiyodo, basée sur le personnage de la célèbre série de manga et d'anime japonaise "Nausicaä de la Vallée du Vent". Le Dorok Soldier est une créature humanoïde qui sert d'un des antagonistes de la série.
-                    La figurine est livrée avec divers accessoires, notamment une lance et un bouclier, ainsi que des mains et des plaques de visage interchangeables. Le Dorok Soldier est également conçu pour être compatible avec d'autres figurines de la gamme Revoltech, permettant des affichages dynamiques et des combats entre personnages de la série Nausicaä et au-delà.
-                </p>
-                <h4>soundtrack</h4>
-                <video src="/img/video.mp4" controls width="300" height="200">
-                    <p>Votre navigateur ne supporte pas la vidéo.</p>
-                </video>
-            </article>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <h2 id="hero-title">Bienvenue sur notre boutique de figurines Ghibli</h2>
+            <p>Découvrez notre collection exclusive de figurines inspirées des films du Studio Ghibli</p>
+            <a href="produits.html" class="cta-button" aria-label="Découvrir notre collection de produits">Voir nos produits</a>
         </section>
 
-        <section id="section2">
-            <h2>Formulaire de Contact</h2>
-            <div>
-                <article class="contact">
-                    <h3>Contactez-nous</h3>
-                    <form action="contact.php" method="post">
-                        <label for="name">Nom:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-                        <input type="submit" value="Envoyer">
-                    </form>
-                </article>
+        <section class="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title">Nos collections populaires</h2>
+            <div class="featured-grid" role="list">
+                <ul>
+                    <li class="featured-item">
+                        <img src="img/img1.png" alt="Figurine Nausicaä de la vallée du vent - Collection exclusive" width="300" height="200">
+                        <h3>Nausicaä de la vallée du vent</h3>
+                        <p>Collection exclusive de figurines</p>
+                        <a href="produits.html" class="featured-link" aria-label="En savoir plus sur la collection Nausicaä">En savoir plus</a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; ceci est un footer.</p>
+        <p>&copy; 2024 Vente de figurines Ghibli. Tous droits réservés.</p>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Liens légaux">
+            <ul>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
