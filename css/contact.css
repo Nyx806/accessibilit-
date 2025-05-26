@@ -1,0 +1,435 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #2c3e50;
+    --background-color: #ffffff;
+    --focus-color: #e74c3c;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header et Navigation */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: #34495e;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.navbar a.active {
+    background-color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Section Contact */
+#section2 {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+input[type="text"]:user-invalid,
+input[type="tel"]:user-invalid,
+input[type="email"]:user-invalid,
+select:user-invalid {
+    border-color: var(--error-color);
+}
+
+input[type="text"]:user-invalid:focus,
+input[type="tel"]:user-invalid:focus,
+input[type="email"]:user-invalid:focus,
+select:user-invalid:focus {
+    border-color: var(--error-color);
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+small {
+    display: block;
+    color: #666;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #2980b9;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Focus styles */
+:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+    .navbar a,
+    .submit-button,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Styles pour la popup de confirmation */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+}
+
+.popup h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.confirm-button:hover,
+.confirm-button:focus {
+    background-color: #45a049;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel-button:hover,
+.cancel-button:focus {
+    background-color: #da190b;
+}
+
+/* Focus styles pour l'accessibilité */
+.confirm-button:focus,
+.cancel-button:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Styles pour les lecteurs d'écran */
+.popup[hidden] {
+    display: none;
+}
+
+/* Animation de la popup */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.popup:not([hidden]) {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Styles pour le feedback */
+.feedback {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.feedback.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.feedback h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.feedback p {
+    margin-bottom: 1rem;
+}
+
+.feedback ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.feedback li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.feedback strong {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Styles pour le bouton désactivé */
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-button:disabled:hover,
+.submit-button:disabled:focus {
+    background-color: #cccccc;
+    outline: none;
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+    .feedback {
+        border: 2px solid currentColor;
+    }
+    
+    .feedback li {
+        border: 1px solid currentColor;
+    }
+    
+    .submit-button:disabled {
+        border: 2px solid currentColor;
+    }
+} 
